@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Pretty select test page</title>
+		<link rel="stylesheet" type="text/css" href="css/pretty.select.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/pretty.select.js"></script>
+		<script type="text/javascript">
+		$(function () {
+			$('select').prettySelect();
+			$('select.test6').prettySelect();
+		});
+		</script>
+	</head>
+	<body>
+		<p>Items with different widths
+		<select class="test0" size="3" style="width: 200px;">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="2">22</option>
+			<option value="3" selected="selected">333</option>
+			<option value="4">4444</option>
+			<option value="5">55555</option>
+			<option value="6">666666</option>
+			<option value="7">7777777</option>
+			<option value="8">88888888</option>
+			<option value="9">9999999999999999</option>
+		</select>
+		</p>
+		<div style="position: relative; left:200px; right: 200px; width: 400px;">
+		<p>Few items in select list, no default
+		<select class="test1">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+		</select>
+		</p>
+		</div>
+		<p>Lot of items in select list, no default, first empty
+		<select class="test2">
+			<option value=""></option>
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			<option value="6">option 6</option>
+			<option value="7">option 7</option>
+			<option value="8">option 8</option>
+			<option value="9">option 9</option>
+			<option value="10">option 10</option>
+		</select></p>
+		<p>Default option
+		<select class="test3">
+			<option value="1">option 1</option>
+			<option value="2" selected="selected">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			<option value="6">option 6</option>
+			<option value="7">option 7</option>
+			<option value="8">option 8</option>
+		</select></p>
+		<p>Make disabled
+		<select class="test4">
+			<option value="1">option 1</option>
+			<option value="2" selected="selected">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			<option value="6">option 6</option>
+			<option value="7">option 7</option>
+			<option value="8">option 8</option>
+		</select>
+		<button type="button" onclick="$('.test4').attr('disabled', 'disabled');">Disable</button>
+		<button type="button" onclick="$('.test4').removeAttr('disabled');">Enable</button></p>
+		<p>Initially placed in hidden div
+		<div class="test5-hidden" style="display: none;">
+		<select class="test5" style="width: 65px;">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="2">22</option>
+			<option value="3" selected="selected">333</option>
+			<option value="4">4444</option>
+			<option value="5">55555</option>
+			<option value="6">666666</option>
+			<option value="7">7777777</option>
+			<option value="8">88888888</option>
+			<option value="9">9999999999999999</option>
+		</select>
+		</div>
+		<button type="button" onclick="$('.test5-hidden').show();">Show</button>
+		<button type="button" onclick="$('.test5-hidden').hide();">Hide</button>
+		</p>
+		<p>Initially hidden select
+		<select class="test7" style="width: 200px; display: none;">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="2">22</option>
+			<option value="3" selected="selected">333</option>
+			<option value="4">4444</option>
+			<option value="5">55555</option>
+			<option value="6">666666</option>
+			<option value="7">7777777</option>
+			<option value="8">88888888</option>
+			<option value="9">9999999999999999</option>
+		</select>
+		<button type="button" onclick="$('.test7').show();">Show</button>
+		<button type="button" onclick="$('.test7').hide();">Hide</button>
+		</p>
+
+		<p>Wrap it twice
+		<select class="test6">
+			<option value=""></option>
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			<option value="6">option 6</option>
+			<option value="7">option 7</option>
+			<option value="8">option 8</option>
+			<option value="9">option 9</option>
+			<option value="10">option 10</option>
+		</select></p>
+	</body>
+</html>

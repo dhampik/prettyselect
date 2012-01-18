@@ -1,0 +1,90 @@
+.pretty-select-wrapper {
+	position: relative;
+	display: inline;
+	font-size: 12px;
+	font-family: Arial;
+	float: left;
+	z-index: 0; /* required by js */
+}
+
+	.pretty-select-wrapper a.pretty-select-control {
+		display: block;
+		position: relative;
+		outline: none;
+		width: 75px; /* default value, it'll be re-calculated by js */
+		background: #DFDFDF url(../i/select_bg.png) repeat-x scroll top left;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFF), to(#DFDFDF));
+		background-image: -webkit-linear-gradient(top, #FFFFFF, #DFDFDF);
+		background-image:    -moz-linear-gradient(top, #FFFFFF, #DFDFDF);
+		background-image:     -ms-linear-gradient(top, #FFFFFF, #DFDFDF);
+		background-image:      -o-linear-gradient(top, #FFFFFF, #DFDFDF);
+		border: 1px solid #C2C2C2;
+		border-radius: 3px;
+		text-decoration: none;
+		font-size: 12px;
+		color: #555;
+		height: 22px;
+	}
+	
+	.pretty-select-wrapper a.pretty-select-disabled {
+		background: #DFDFDF;
+	}
+
+	.pretty-select-wrapper a.pretty-select-control span.pretty-select-value-text {
+		display: block;
+		height: 22px;
+		padding: 4px 0px 0px 6px;
+		width: 53px; /* default value, it'll be re-calculated by js */
+		overflow: hidden;
+	}
+
+	.pretty-select-wrapper a.pretty-select-control span.pretty-select-arrow {
+		display: block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 22px;
+		height: 22px;
+		background: url(../i/select_arrow.png) no-repeat 9px 9px;
+	}
+
+	.pretty-select-wrapper ul.pretty-select-options {
+		list-style: none outside;
+		margin: 0px;
+		padding: 0px;
+		position: absolute;
+		z-index: 90;
+		white-space: nowrap;
+		background: white;
+		border: 1px solid #C2C2C2;
+		left: 2px;
+		overflow: auto;
+	}
+
+	.pretty-select-wrapper ul.pretty-select-options li {
+		display: block;
+		height: 22px;
+	}
+
+	.pretty-select-wrapper ul.pretty-select-options li a {
+		display: block;
+		padding: 0px 4px;
+		height: 22px;
+		color: #555;
+		text-decoration: none;
+		line-height: 22px;
+	}
+
+	.pretty-select-wrapper ul.pretty-select-options li a.pretty-select-selected {
+		background-color: #DFDFDF;
+		color: #333;
+	}
+
+	.pretty-select-wrapper ul.pretty-select-options li a:hover {
+		background-color: #3582C4;
+		color: white;
+	}
+
+.pretty-select-hidden {
+	display: none;
+}
