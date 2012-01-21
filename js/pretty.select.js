@@ -155,7 +155,12 @@
 								$control.removeClass('pretty-select-disabled')
 							}
 						}
-					}, 1000);
+						if ($('li a.pretty-select-selected', $ulOptions).data('pretty-select-option').index != $select.val()){
+							$('a.pretty-select-selected', $ulOptions).removeClass('pretty-select-selected');
+							$('a:eq('+ $select.get(0).selectedIndex +')', $ulOptions).addClass('pretty-select-selected');
+							$('.pretty-select-value-text', $control).html($('a:eq('+ $select.get(0).selectedIndex +')', $ulOptions).html());
+						}
+					}, 100);
 					$select.data('pretty-select-disabler-iid', iid);
 				}
 			});

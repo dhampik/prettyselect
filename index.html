@@ -7,7 +7,7 @@
 		<script type="text/javascript" src="js/pretty.select.js"></script>
 		<script type="text/javascript">
 		$(function () {
-			$('select').prettySelect();
+			$('p select, .test5').prettySelect();
 			$('select.test6').prettySelect();
 		});
 		</script>
@@ -72,8 +72,9 @@
 			<option value="8">option 8</option>
 		</select>
 		<button type="button" onclick="$('.test4').attr('disabled', 'disabled');">Disable</button>
-		<button type="button" onclick="$('.test4').removeAttr('disabled');">Enable</button></p>
-		<p>Initially placed in hidden div
+		<button type="button" onclick="$('.test4').removeAttr('disabled');">Enable</button>
+		</p>
+		<p>Initially placed in hidden div</p>
 		<div class="test5-hidden" style="display: none;">
 		<select class="test5" style="width: 65px;">
 			<option value=""></option>
@@ -90,9 +91,8 @@
 		</div>
 		<button type="button" onclick="$('.test5-hidden').show();">Show</button>
 		<button type="button" onclick="$('.test5-hidden').hide();">Hide</button>
-		</p>
-		<p>Initially hidden select
-		<select class="test7" style="width: 200px; display: none;">
+		<p>Change select value programmatically
+		<select class="test7">
 			<option value=""></option>
 			<option value="1">1</option>
 			<option value="2">22</option>
@@ -104,8 +104,7 @@
 			<option value="8">88888888</option>
 			<option value="9">9999999999999999</option>
 		</select>
-		<button type="button" onclick="$('.test7').show();">Show</button>
-		<button type="button" onclick="$('.test7').hide();">Hide</button>
+		<button type="button" onclick="$('.test7').val(Math.round(Math.random() * 9))">Random change</button>
 		</p>
 
 		<p>Wrap it twice
@@ -122,5 +121,14 @@
 			<option value="9">option 9</option>
 			<option value="10">option 10</option>
 		</select></p>
+		<p>Simple select
+		<select id="simpleselect" onchange="console.log('value changed to '+$(this).val());">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<button type="button" onclick="$('#simpleselect').val((parseInt($('#simpleselect').val(), 10)+1) % 5);">Random change</button>
 	</body>
 </html>
