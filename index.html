@@ -130,5 +130,8 @@
 			<option value="4">4</option>
 		</select>
 		<button type="button" onclick="$('#simpleselect').val((parseInt($('#simpleselect').val(), 10)+1) % 5);">Random change</button>
+		<div>
+			<button type="button" onclick="$('.test6').parent().clone().find('select').removeClass('test6').prettySelect().end().insertAfter(this);">Clone 'Wrap it twice' paragraph</button>
+		</div>
 	</body>
 </html>

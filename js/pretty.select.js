@@ -43,7 +43,7 @@
 					$.removeData($select, 'pretty-select-disabler-iid')
 				}
 				
-				if ($select.data('pretty-select-wrapped')) {
+				if ($select.closest('.pretty-select-wrapper').length > 0) {
 					var $auxWrapper = $select.closest('.pretty-select-wrapper');
 					$auxWrapper.find('.pretty-select-control').remove();
 					$auxWrapper.find('.pretty-select-options').remove();
@@ -127,7 +127,7 @@
 				
 				if ($wrapperShadow.find('ul').outerWidth() < $wrapperShadow.find('.pretty-select-control').outerWidth()) {
 					var width1 = $wrapperShadow.find('ul').width()+(optionsScrollRequired?20:0);
-					var width2 = $wrapperShadow.find('.pretty-select-control').outerWidth() - 2*parseInt($ulOptions.css('left'), 10) - parseInt($ulOptions.css('border-left-width'), 10) - parseInt($ulOptions.css('border-right-width'), 10);
+					var width2 = $wrapperShadow.find('.pretty-select-control').outerWidth() - 2*2/*parseInt($ulOptions.css('left'), 10)*/ - 2/*parseInt($ulOptions.css('border-left-width'), 10) - parseInt($ulOptions.css('border-right-width'), 10)*/;
 					$ulOptions.width(Math.max(width1, width2));
 				} else if (optionsScrollRequired) {
 					$ulOptions.width($wrapperShadow.find('ul').width()+20);
@@ -140,8 +140,6 @@
 				}
 				
 				$ulOptions.css('display', 'none');
-				
-				$select.data('pretty-select-wrapped', 1);
 				
 				if (!$select.data('pretty-select-disabler-iid')) {
 					var iid = setInterval(function () {
